@@ -51,6 +51,7 @@ find_package(moveit_ros_planning REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(range-v3 REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(tf2_kdl)
 
 # TODO(tylerjw): re-enable these
 # find_package(OpenMP)
@@ -114,6 +115,7 @@ target_link_libraries(
     Eigen3::Eigen
     fmt::fmt
     fp::fp
+    tf2_kdl
     moveit_core::moveit_collision_detection_fcl
     moveit_core::moveit_kinematics_base
     moveit_core::moveit_robot_model

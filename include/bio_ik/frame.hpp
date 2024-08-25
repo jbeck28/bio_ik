@@ -33,7 +33,7 @@
 
 #include <Eigen/Dense>
 // #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
-#include <tf2_kdl/tf2_kdl.hpp>
+#include <tf2_kdl/tf2_kdl/tf2_kdl.hpp>
 #include <vector>
 
 namespace bio_ik {
