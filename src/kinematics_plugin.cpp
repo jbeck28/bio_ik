@@ -577,7 +577,7 @@ struct BioIKKinematicsPlugin : kinematics::KinematicsBase {
     }
 
     // callback?
-    if (!solution_callback.empty()) {
+    if (solution_callback) {
       // run callback
       solution_callback(ik_poses.front(), solution, error_code);
 

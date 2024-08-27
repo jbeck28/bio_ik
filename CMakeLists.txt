@@ -49,9 +49,9 @@ find_package(fp REQUIRED)
 find_package(moveit_core REQUIRED)
 find_package(moveit_ros_planning REQUIRED)
 find_package(pluginlib REQUIRED)
-find_package(range-v3 REQUIRED)
+find_package(range_v3 REQUIRED)  # Updated to use the ROS 2 package
 find_package(rclcpp REQUIRED)
-find_package(tf2_kdl)
+find_package(tf2_kdl REQUIRED)
 
 # TODO(tylerjw): re-enable these
 # find_package(OpenMP)
@@ -115,12 +115,12 @@ target_link_libraries(
     Eigen3::Eigen
     fmt::fmt
     fp::fp
-    tf2_kdl
+    tf2_kdl::tf2_kdl
     moveit_core::moveit_collision_detection_fcl
     moveit_core::moveit_kinematics_base
     moveit_core::moveit_robot_model
     moveit_ros_planning::moveit_rdf_loader
-    range-v3::range-v3
+    range_v3::range_v3  # Linking against the range-v3 target from range_v3_ros2
     rclcpp::rclcpp
     # TODO(tylerjw): what does this change?
     -static-libgcc
@@ -192,5 +192,6 @@ ament_export_libraries(
 ament_export_targets(
   export_${PROJECT_NAME}
 )
+ament_export_dependencies(range_v3)  # Export the ROS 2 range-v3 package dependency
 
 ament_package()
