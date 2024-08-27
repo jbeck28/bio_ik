@@ -15,6 +15,14 @@
 [![contributors](https://img.shields.io/github/contributors/tylerjw/bio_ik)](https://github.com/tylerjw/bio_ik/graphs/contributors)
 [![last commit](https://img.shields.io/github/last-commit/tylerjw/bio_ik/ros2)](https://github.com/tylerjw/bio_ik/commits/ros2)
 
+
+## Changes JBeck Fork
+Use these forks of these two dependencies.  Clone these into your ros2 src directory.
+
+* https://github.com/jodle001/range-v3.git
+* https://github.com/jodle001/fp.git
+
+
 ## Disclaimer
 
 This repository provides a BSD-licensed standalone implementation
